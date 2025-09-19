@@ -100,84 +100,46 @@
         </nav>
         <main class="container mt-4" role="main">
             <form action="surveyQA.html" method="get">
-                <div class="mb-3">
-                    <label class="form-label fw-semibold d-block">1.
-                        Visit</label>
-                    <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="visit"
-                            id="Initial"
-                            value="Initial" />
-                        <label class="form-check-label"
-                            for="Initial">Initial</label>
-                    </div>
-                    <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="visit"
-                            id="followup"
-                            value="followup" />
-                        <label class="form-check-label"
-                            for="followup">Follow-up</label>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label fw-semibold d-block">2. Door
+
+                <fieldset class="mb-3">
+                    <label class="form-label fw-semibold">1. Door
                         knocked?</label>
                     <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="doorKnock"
-                            id="unanswered"
-                            value="unanswered" />
+                        <input class="form-check-input" type="radio" name="q1"
+                            id="q1-yes" value="yes" required>
                         <label class="form-check-label"
-                            for="unanswered">Unanswered</label>
+                            for="q1-yes">Unanswered</label>
                     </div>
                     <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="doorKnock"
-                            id="answered"
-                            value="answered" />
+                        <input class="form-check-input" type="radio" name="q1"
+                            id="q1-no" value="no" required>
                         <label class="form-check-label"
-                            for="answered">Answered</label>
+                            for="q1-no">Answered</label>
                     </div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label fw-semibold d-block">3. Can I take
+                </fieldset>
+                <fieldset class="mb-3">
+                    <label class="form-label fw-semibold">2. Can I take
                         two mins of your time?</label>
                     <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="timeConsent"
-                            id="yesTime"
-                            value="yes" />
+                        <input class="form-check-input" type="radio" name="q2"
+                            id="q2-yes" value="yes" required>
                         <label class="form-check-label"
-                            for="yesTime">Yes</label>
+                            for="q2-yes">Yes</label>
                     </div>
                     <div class="form-check">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="timeConsent"
-                            id="noTime"
-                            value="no" />
-                        <label class="form-check-label" for="noTime">No</label>
+                        <input class="form-check-input" type="radio" name="q2"
+                            id="q2-no" value="no" required>
+                        <label class="form-check-label"
+                            for="q2-no">No</label>
                     </div>
-                </div>
+                </fieldset>
 
-                <button
-                    type="submit"
-                    class="btn btn-primary mt-3 px-5 text-center btn-lg">
-                    Continue
-                </button>
+                <div class="d-flex justify-content-evenly mt-5">
+                    <a href="existingHHS.html"
+                        class="btn btn-outline-primary btn-lg px-4">Previous</a>
+                    <button type="submit"
+                        class="btn btn-primary btn-lg px-4 text-white">Continue</button>
+                </div>
             </form>
         </main>
     </body>
