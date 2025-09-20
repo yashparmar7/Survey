@@ -16,62 +16,74 @@
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>
+        <style>
+@media (max-width: 576px) {
+    .navbar-nav .nav-item .nav-link {
+        padding: 0.5rem !important;
+        font-size: 1.1rem;
+    }
+}
+</style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm"
+            role="navigation" aria-label="Main navigation">
             <div class="container-fluid">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarIcons"
+                    aria-controls="navbarIcons" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent">
-                    <ul
-                        class="navbar-nav mb-2 mb-lg-0 align-items-center gap-3">
+
+                <!-- Navbar items -->
+                <div class="collapse navbar-collapse justify-content-end"
+                    id="navbarIcons">
+                    <ul class="navbar-nav align-items-center gap-2 gap-lg-3">
+                        <!-- Notification Icon -->
                         <li class="nav-item">
-                            <a
-                                href="#"
-                                class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
+                            <a href="#"
+                                class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
                                 title="Notifications"
                                 aria-label="Notifications">
                                 <i class="fa-solid fa-bell"></i>
                             </a>
                         </li>
+
+                        <!-- User Dropdown -->
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                aria-haspopup="true"
+                                class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
+                                href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-haspopup="true"
                                 aria-label="User menu">
                                 <i class="fa-solid fa-user"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
+                            <ul class="dropdown-menu dropdown-menu-end shadow"
+                                role="menu" aria-label="User menu options">
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i
-                                            class="fa-regular fa-user me-2"></i>My
-                                        Profile
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#" role="menuitem">
+                                        <i class="fa-regular fa-user me-2"></i>
+                                        My Profile
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i
-                                            class="fa-solid fa-gear me-2"></i>Settings
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#" role="menuitem">
+                                        <i class="fa-solid fa-gear me-2"></i>
+                                        Settings
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-danger"
-                                        href="index.html">
+                                    <a
+                                        class="dropdown-item text-danger d-flex align-items-center"
+                                        href="index.html" role="menuitem">
                                         <i
                                             class="fa-solid fa-arrow-right-from-bracket me-2"></i>
                                         Logout
@@ -85,12 +97,17 @@
         </nav>
 
         <main class="container">
-            <div class="logo mt-4  d-flex justify-content-center">
+            <div class="logo mt-4 d-flex justify-content-center">
                 <img src="./assets/logo.png"
                     alt="D2DSurvey logo"
                     class="img-fluid"
                     style="width: 80px;" />
             </div>
+
+            <div class="text-center mt-2">
+                <h4 class="fw-bold">Door Search</h4>
+            </div>
+
             <div class="row justify-content-center g-3">
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="card-form p-4">
@@ -113,7 +130,7 @@
                             </button>
                         </form>
 
-                        <div class="search-info mt-5">
+                        <div id="search-info" class="search-info mt-4 d-none">
                             <p><span class="fw-bold">Ward Number:</span> 103</p>
                             <p><span class="fw-bold">Area:</span> Whitefield</p>
                             <p><span class="fw-bold">Community:</span> Prestige
@@ -121,33 +138,51 @@
                             <p><span class="fw-bold">Door Number:</span> 782</p>
                         </div>
 
-                        <div class="mt-4">
-                            <p class="mb-1">No Record Found.</p>
-                            <p class="mb-0">Please add a new survey record.</p>
+                        <div id="no-record" class="mt-4 d-none">
+                            <p class="mb-1 fw-bold">No Record Found.</p>
+                            <p class="mb-0 fw-semibold">Please add a new survey
+                                record.</p>
                         </div>
-
-                        <form id="startSurveyForm">
+                        <form id="startSurveyForm" class="d-none">
                             <button type="submit"
                                 class="btn btn-primary w-100 mt-5 p-lg-2">
                                 Start New Survey
                             </button>
                         </form>
+
                     </div>
                 </div>
             </div>
         </main>
 
         <script>
-            document.getElementById("searchForm").addEventListener("submit", function(event) {
-                event.preventDefault();
-                const doorNumber = document.getElementById("door-number").value;
-                window.location.href = "existingHHS.html?door=" + encodeURIComponent(doorNumber);
-            });
+    const searchForm = document.getElementById("searchForm");
+    const startSurveyForm = document.getElementById("startSurveyForm");
+    const searchInfo = document.getElementById("search-info");
+    const noRecord = document.getElementById("no-record");
+    const doorInput = document.getElementById("door-number");
 
-            document.getElementById("startSurveyForm").addEventListener("submit", function(event) {
-                event.preventDefault();
-                window.location.href = "survey-start.html";
-            });
-        </script>
+    searchForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const doorNumber = doorInput.value.trim();
+
+        if (doorNumber === "246") {
+            window.location.href = "existingHHS.html";
+        } else if (doorNumber !== "") {
+            searchInfo.classList.remove("d-none");
+            noRecord.classList.remove("d-none");
+            startSurveyForm.classList.remove("d-none");
+        } else {
+            searchInfo.classList.add("d-none");
+            noRecord.classList.add("d-none");
+            startSurveyForm.classList.add("d-none");
+        }
+    });
+
+    startSurveyForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        window.location.href = "survey-start.html";
+    });
+</script>
     </body>
 </html>

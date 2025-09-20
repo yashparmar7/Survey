@@ -13,68 +13,93 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
+
+        <style>
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.4rem !important;
+    }
+}
+@media (max-width: 576px) {
+    .navbar-nav {
+        justify-content: flex-start !important;
+    }
+    .navbar-nav .nav-item {
+        flex: 0 0 100%;
+        text-align: left;
+    }
+}
+</style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm"
+            role="navigation" aria-label="Main navigation">
             <div class="container-fluid">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarInfo"
+                    aria-controls="navbarInfo" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent">
 
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse justify-content-end"
+                    id="navbarInfo">
                     <ul
-                        class="navbar-nav mb-2 mb-lg-0 align-items-center gap-3">
-                        <li class="nav-item"> <b>Ward Number :</b> 103 </li>
+                        class="navbar-nav align-items-center gap-2 gap-lg-3 flex-wrap text-nowrap">
+                        <!-- Info Items -->
+                        <li class="nav-item"><span class="fw-semibold">Ward
+                                Number:</span> 103</li>
+                        <li class="nav-item"><span
+                                class="fw-semibold">Area:</span> Whitefield</li>
+                        <li class="nav-item"><span
+                                class="fw-semibold">Community:</span> Prestige
+                            Boulevard</li>
+                        <li class="nav-item"><span class="fw-semibold">Door
+                                Number:</span> 246</li>
 
+                        <!-- Notification Icon -->
                         <li class="nav-item">
-                            <a
-                                href="#"
-                                class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
+                            <a href="#"
+                                class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
+                                title="Notifications"
                                 aria-label="Notifications">
                                 <i class="fa-solid fa-bell"></i>
                             </a>
                         </li>
+
+                        <!-- User Dropdown -->
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
+                                class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
+                                href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-haspopup="true"
                                 aria-label="User menu">
                                 <i class="fa-solid fa-user"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i
-                                            class="fa-regular fa-user me-2"></i>My
-                                        Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i
-                                            class="fa-solid fa-gear me-2"></i>Settings
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item text-danger"
-                                        href="index.html">
-                                        <i
+                            <ul class="dropdown-menu dropdown-menu-end shadow"
+                                role="menu" aria-label="User menu options">
+                                <li><a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"><i
+                                            class="fa-regular fa-user me-2"></i>
+                                        My Profile</a></li>
+                                <li><a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"><i
+                                            class="fa-solid fa-gear me-2"></i>
+                                        Settings</a></li>
+                                <li><a
+                                        class="dropdown-item text-danger d-flex align-items-center"
+                                        href="index.html"><i
                                             class="fa-solid fa-arrow-right-from-bracket me-2"></i>
-                                        Logout
-                                    </a>
-                                </li>
+                                        Logout</a></li>
                             </ul>
                         </li>
                     </ul>

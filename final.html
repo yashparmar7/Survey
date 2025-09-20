@@ -15,62 +15,118 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
+
+        <style>
+        fieldset label.form-label {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        #remark {
+        width: 100% !important;
+        }
+
+        .form-check {
+            margin-bottom: 0.5rem;
+        }
+        .collapse-card {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+        .fa-lightbulb {
+            cursor: pointer;
+        }
+
+        .btn-lg {
+            min-width: 120px;
+        }
+      
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.4rem !important;
+    }
+}
+@media (max-width: 576px) {
+    .navbar-nav {
+        justify-content: flex-start !important;
+    }
+    .navbar-nav .nav-item {
+        flex: 0 0 100%;
+        text-align: left;
+    }
+}
+    </style>
     </head>
     <body>
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm"
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm"
             role="navigation" aria-label="Main navigation">
             <div class="container-fluid">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarInfo"
+                    aria-controls="navbarInfo" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Navbar Content -->
                 <div class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent">
+                    id="navbarInfo">
                     <ul
-                        class="navbar-nav mb-2 mb-lg-0 align-items-center gap-3">
+                        class="navbar-nav align-items-center gap-2 gap-lg-3 flex-wrap text-nowrap">
+                        <!-- Info Items -->
+                        <li class="nav-item"><span class="fw-semibold">Ward
+                                Number:</span> 103</li>
+                        <li class="nav-item"><span
+                                class="fw-semibold">Area:</span> Whitefield</li>
+                        <li class="nav-item"><span
+                                class="fw-semibold">Community:</span> Prestige
+                            Boulevard</li>
+                        <li class="nav-item"><span class="fw-semibold">Door
+                                Number:</span> 782</li>
 
+                        <!-- Notification Icon -->
                         <li class="nav-item">
                             <a href="#"
-                                class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
+                                class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
                                 title="Notifications"
                                 aria-label="Notifications">
-                                <i class="fa-solid fa-bell"
-                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-bell"></i>
                             </a>
                         </li>
 
+                        <!-- User Dropdown -->
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
+                                class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
                                 href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false" aria-haspopup="true"
                                 aria-label="User menu">
-                                <i class="fa-solid fa-user"
-                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-user"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end"
+                            <ul class="dropdown-menu dropdown-menu-end shadow"
                                 role="menu" aria-label="User menu options">
-                                <li><a class="dropdown-item" href="#"
-                                        role="menuitem"><i
-                                            class="fa-regular fa-user me-2"
-                                            aria-hidden="true"></i>My
-                                        Profile</a></li>
-                                <li><a class="dropdown-item" href="#"
-                                        role="menuitem"><i
-                                            class="fa-solid fa-gear me-2"
-                                            aria-hidden="true"></i>Settings</a></li>
-                                <li><a class="dropdown-item text-danger"
-                                        href="index.html" role="menuitem"><i
-                                            class="fa-solid fa-arrow-right-from-bracket me-2"
-                                            aria-hidden="true"></i>Logout</a></li>
+                                <li><a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"><i
+                                            class="fa-regular fa-user me-2"></i>
+                                        My Profile</a></li>
+                                <li><a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"><i
+                                            class="fa-solid fa-gear me-2"></i>
+                                        Settings</a></li>
+                                <li><a
+                                        class="dropdown-item text-danger d-flex align-items-center"
+                                        href="index.html"><i
+                                            class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                                        Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -78,13 +134,30 @@
             </div>
         </nav>
 
-        <main class="container mt-4" role="main">
+        <main class="container mt-4">
             <form action="home.html" method="get">
-                <h5 class="mb-4">Final Check.</h5>
+                <h5 class="mb-4">Final Check</h5>
 
-                <fieldset class="mb-3">
-                    <label class="form-label fw-semibold">Did you collect the
-                        Phone Number?</label>
+                <div class="mb-4">
+                    <label for="remark"
+                        class="form-label fw-semibold">Remark</label>
+                    <textarea name="remark" id="remark" rows="3"
+                        class="form-control w-100"
+                        placeholder="Add your comments"></textarea>
+                </div>
+
+                <fieldset>
+                    <label class="form-label">
+                        Did you collect the Phone Number?
+                        <i class="fa-solid fa-lightbulb text-warning ms-4"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#instruction1"></i>
+                    </label>
+                    <div class="collapse collapse-card" id="instruction1">
+                        <div class="card card-body p-2">
+                            Instruction for Question 1 goes here.
+                        </div>
+                    </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio"
                             name="phoneCollected" id="q1-yes" value="yes"
@@ -99,9 +172,18 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="mb-3">
-                    <label class="form-label fw-semibold">Did you add them to
-                        the WhatsApp group?</label>
+                <fieldset>
+                    <label class="form-label">
+                        Did you add them to the WhatsApp group?
+                        <i class="fa-solid fa-lightbulb text-warning ms-4"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#instruction2"></i>
+                    </label>
+                    <div class="collapse collapse-card" id="instruction2">
+                        <div class="card card-body p-2">
+                            Instruction for Question 2 goes here.
+                        </div>
+                    </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio"
                             name="whatsappGroup" id="q2-yes" value="yes"
@@ -115,9 +197,18 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="mb-3">
-                    <label class="form-label fw-semibold">Did you hand out the
-                        pamphlet?</label>
+                <fieldset>
+                    <label class="form-label">
+                        Did you hand out the pamphlet?
+                        <i class="fa-solid fa-lightbulb text-warning ms-4"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#instruction3"></i>
+                    </label>
+                    <div class="collapse collapse-card" id="instruction3">
+                        <div class="card card-body p-2">
+                            Instruction for Question 3 goes here.
+                        </div>
+                    </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio"
                             name="pamphletGiven" id="q3-yes" value="yes"
@@ -131,7 +222,7 @@
                     </div>
                 </fieldset>
 
-                <div class="d-flex justify-content-evenly gap-3 mb-3 mt-4">
+                <div class="d-flex justify-content-evenly gap-3 mb-5 mt-4">
                     <button type="submit"
                         class="btn btn-primary btn-lg text-white">Finish</button>
                     <a href="survey.html"
