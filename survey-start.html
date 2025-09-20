@@ -3,95 +3,70 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Document</title>
+        <title>Survey Questions</title>
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            crossorigin="anonymous" />
+            rel="stylesheet" crossorigin="anonymous" />
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>
-        <link
-            rel="stylesheet"
+
+        <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer" />
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <nav
-            class="navbar navbar-expand-lg bg-body-tertiary shadow-sm"
-            role="navigation"
-            aria-label="Main navigation">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm"
+            role="navigation" aria-label="Main navigation">
             <div class="container-fluid">
-                <button
-                    class="navbar-toggler"
-                    type="button"
+                <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div
-                    class="collapse navbar-collapse justify-content-end"
+
+                <div class="collapse navbar-collapse justify-content-end"
                     id="navbarSupportedContent">
                     <ul
                         class="navbar-nav mb-2 mb-lg-0 align-items-center gap-3">
+                        <li class="nav-item"><b>Ward Number :</b> 103</li>
+                        <li class="nav-item"><b>Area :</b> Whitefield</li>
+                        <li class="nav-item"><b>Community :</b> Prestige
+                            Boulevard</li>
+                        <li class="nav-item"><b>Door Number :</b> 782</li>
+
                         <li class="nav-item">
-                            <a
-                                href="#"
+                            <a href="#"
                                 class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
                                 title="Notifications"
                                 aria-label="Notifications">
-                                <i class="fa-solid fa-bell"
-                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-bell"></i>
                             </a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link bg-primary-subtle border border-primary-subtle rounded-2 p-2 shadow-sm"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                aria-haspopup="true"
+                                href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-haspopup="true"
                                 aria-label="User menu">
-                                <i class="fa-solid fa-user"
-                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-user"></i>
                             </a>
-                            <ul
-                                class="dropdown-menu dropdown-menu-end"
-                                role="menu"
-                                aria-label="User menu options">
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        role="menuitem">
-                                        <i class="fa-regular fa-user me-2"
-                                            aria-hidden="true"></i>
-                                        My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        role="menuitem">
-                                        <i class="fa-solid fa-gear me-2"
-                                            aria-hidden="true"></i>
-                                        Settings
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        class="dropdown-item text-danger"
-                                        href="index.html"
-                                        role="menuitem">
-                                        <i
-                                            class="fa-solid fa-arrow-right-from-bracket me-2"
-                                            aria-hidden="true"></i>
-                                        Logout
-                                    </a>
-                                </li>
+                            <ul class="dropdown-menu dropdown-menu-end"
+                                role="menu" aria-label="User menu options">
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-regular fa-user me-2"></i>
+                                        My Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-gear me-2"></i>
+                                        Settings</a></li>
+                                <li><a class="dropdown-item text-danger"
+                                        href="index.html"><i
+                                            class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                                        Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -102,40 +77,38 @@
             <form action="surveyQA.html" method="get">
 
                 <fieldset class="mb-3">
-                    <label class="form-label fw-semibold">1. Door
+                    <label class="form-label fw-semibold">1. Was the door
                         knocked?</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q1"
-                            id="q1-yes" value="yes" required>
+                            id="q1-unanswered" value="unanswered" required>
                         <label class="form-check-label"
-                            for="q1-yes">Unanswered</label>
+                            for="q1-unanswered">Unanswered</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q1"
-                            id="q1-no" value="no" required>
+                            id="q1-answered" value="answered" required>
                         <label class="form-check-label"
-                            for="q1-no">Answered</label>
+                            for="q1-answered">Answered</label>
                     </div>
                 </fieldset>
                 <fieldset class="mb-3">
-                    <label class="form-label fw-semibold">2. Can I take
-                        two mins of your time?</label>
+                    <label class="form-label fw-semibold">2. Can I take two
+                        minutes of your time?</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2"
                             id="q2-yes" value="yes" required>
-                        <label class="form-check-label"
-                            for="q2-yes">Yes</label>
+                        <label class="form-check-label" for="q2-yes">Yes</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2"
                             id="q2-no" value="no" required>
-                        <label class="form-check-label"
-                            for="q2-no">No</label>
+                        <label class="form-check-label" for="q2-no">No</label>
                     </div>
                 </fieldset>
 
                 <div class="d-flex justify-content-evenly mt-5">
-                    <a href="existingHHS.html"
+                    <a href="door-search.html"
                         class="btn btn-outline-primary btn-lg px-4">Previous</a>
                     <button type="submit"
                         class="btn btn-primary btn-lg px-4 text-white">Continue</button>

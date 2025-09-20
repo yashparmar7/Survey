@@ -85,10 +85,17 @@
         </nav>
 
         <main class="container">
+            <div class="logo mt-4  d-flex justify-content-center">
+                <img src="./assets/logo.png"
+                    alt="D2DSurvey logo"
+                    class="img-fluid"
+                    style="width: 80px;" />
+            </div>
             <div class="row justify-content-center g-3">
                 <div class="col-12 col-md-8 col-lg-6">
-                    <div class="card-form  p-4">
-                        <form action="#" method="get">
+                    <div class="card-form p-4">
+
+                        <form id="searchForm">
                             <div class="mb-3">
                                 <label for="door-number"
                                     class="form-label fw-semibold">Door
@@ -97,10 +104,11 @@
                                     type="text"
                                     class="form-control"
                                     id="door-number"
+                                    value="246"
                                     placeholder="Enter door number" />
                             </div>
                             <button type="submit"
-                                class="btn btn-primary w-100 p-2 ">
+                                class="btn btn-primary w-100 p-2">
                                 Search
                             </button>
                         </form>
@@ -118,7 +126,7 @@
                             <p class="mb-0">Please add a new survey record.</p>
                         </div>
 
-                        <form action="existingHHS.html" method="get">
+                        <form id="startSurveyForm">
                             <button type="submit"
                                 class="btn btn-primary w-100 mt-5 p-lg-2">
                                 Start New Survey
@@ -128,5 +136,18 @@
                 </div>
             </div>
         </main>
+
+        <script>
+            document.getElementById("searchForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const doorNumber = document.getElementById("door-number").value;
+                window.location.href = "existingHHS.html?door=" + encodeURIComponent(doorNumber);
+            });
+
+            document.getElementById("startSurveyForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                window.location.href = "survey-start.html";
+            });
+        </script>
     </body>
 </html>
