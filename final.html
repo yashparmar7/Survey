@@ -27,17 +27,6 @@
         width: 100% !important;
         }
 
-        .form-check {
-            margin-bottom: 0.5rem;
-        }
-        .collapse-card {
-            margin-bottom: 0.75rem;
-            font-size: 0.9rem;
-        }
-        .fa-lightbulb {
-            cursor: pointer;
-        }
-
         .btn-lg {
             min-width: 120px;
         }
@@ -114,7 +103,7 @@
                                 role="menu" aria-label="User menu options">
                                 <li><a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#"><i
+                                        href="profile.html"><i
                                             class="fa-regular fa-user me-2"></i>
                                         My Profile</a></li>
                                 <li><a
@@ -146,19 +135,24 @@
                         placeholder="Add your comments"></textarea>
                 </div>
 
-                <fieldset>
-                    <label class="form-label">
-                        Did you collect the Phone Number?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#instruction1"></i>
-                    </label>
-                    <div class="collapse collapse-card" id="instruction1">
-                        <div class="card card-body p-2">
-                            Instruction for Question 1 goes here.
+                <fieldset class="mb-3">
+                    <div class="d-flex align-items-start gap-2">
+                        <label class="form-label fw-semibold mb-0">
+                            Did you collect the Phone Number?
+                            <i class="fa-solid fa-lightbulb text-warning ms-2"
+                                style="cursor:pointer;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#instruction1"></i>
+                        </label>
+                        <div class="collapse flex-grow-1"
+                            id="instruction1">
+                            <div class="card card-body p-2"
+                                style="max-width: 800px;">
+                                Instruction for Question 1 goes here.
+                            </div>
                         </div>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check mt-2">
                         <input class="form-check-input" type="radio"
                             name="phoneCollected" id="q1-yes" value="yes"
                             required>
@@ -172,19 +166,23 @@
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <label class="form-label">
-                        Did you add them to the WhatsApp group?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#instruction2"></i>
-                    </label>
-                    <div class="collapse collapse-card" id="instruction2">
-                        <div class="card card-body p-2">
-                            Instruction for Question 2 goes here.
+                <fieldset class="mb-3">
+                    <div class="d-flex align-items-start gap-2">
+                        <label class="form-label fw-semibold mb-0">
+                            Did you add them to the WhatsApp group?
+                            <i class="fa-solid fa-lightbulb text-warning ms-2"
+                                style="cursor:pointer;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#instruction2"></i>
+                        </label>
+                        <div class="collapse flex-grow-1" id="instruction2">
+                            <div class="card card-body p-2"
+                                style="max-width: 800px;">
+                                Instruction for Question 2 goes here.
+                            </div>
                         </div>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check mt-2">
                         <input class="form-check-input" type="radio"
                             name="whatsappGroup" id="q2-yes" value="yes"
                             required>
@@ -197,19 +195,23 @@
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <label class="form-label">
-                        Did you hand out the pamphlet?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#instruction3"></i>
-                    </label>
-                    <div class="collapse collapse-card" id="instruction3">
-                        <div class="card card-body p-2">
-                            Instruction for Question 3 goes here.
+                <fieldset class="mb-3">
+                    <div class="d-flex align-items-start gap-2">
+                        <label class="form-label fw-semibold mb-0">
+                            Did you hand out the pamphlet?
+                            <i class="fa-solid fa-lightbulb text-warning ms-2"
+                                style="cursor:pointer;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#instruction3"></i>
+                        </label>
+                        <div class="collapse flex-grow-1" id="instruction3">
+                            <div class="card card-body p-2"
+                                style="max-width: 800px;">
+                                Instruction for Question 3 goes here.
+                            </div>
                         </div>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check mt-2">
                         <input class="form-check-input" type="radio"
                             name="pamphletGiven" id="q3-yes" value="yes"
                             required>

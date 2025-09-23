@@ -67,7 +67,7 @@
                                 <li>
                                     <a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#" role="menuitem">
+                                        href="profile.html" role="menuitem">
                                         <i class="fa-regular fa-user me-2"></i>
                                         My Profile
                                     </a>
@@ -114,33 +114,69 @@
 
                         <form id="searchForm">
                             <div class="mb-3">
-                                <label for="door-number"
-                                    class="form-label fw-semibold">Door
-                                    Number</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="door-number"
-                                    value="246"
+                                <div class="d-flex align-items-start gap-3">
+                                    <label for="door-number"
+                                        class="form-label fw-semibold">
+                                        Door Number
+                                        <i
+                                            class="fa-solid fa-lightbulb text-warning ms-2"
+                                            style="cursor:pointer;"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#q1-instruction"
+                                            aria-expanded="false"
+                                            aria-controls="q1-instruction"></i>
+                                    </label>
+                                </div>
+
+                                <div class="collapse mt-2" id="q1-instruction">
+                                    <div class="card card-body p-2">
+                                        Namaskara! I’m a volunteer with the
+                                        Bengaluru NavaNirmana Party – or BNP. We
+                                        are a citizen-led political party
+                                        focused only on Bengaluru and its local
+                                        civic issues.<br><br>
+                                        We’re not here to ask for votes – just
+                                        to talk about the citizen movement that
+                                        is happening in your area.<br><br>
+                                        We’re meeting residents like you to
+                                        listen to your issues, share what BNP is
+                                        doing, and invite you to be part of this
+                                        effort – as a supporter, a volunteer, or
+                                        just someone who wants better
+                                        governance.<br><br>
+                                        Can I take 2 minutes of your time and
+                                        share how?
+                                    </div>
+                                </div>
+
+                                <input type="text" class="form-control mt-2"
+                                    id="door-number" value="246"
                                     placeholder="Enter door number" />
                             </div>
+
                             <button type="submit"
                                 class="btn btn-primary w-100 p-2">
                                 Search
                             </button>
                         </form>
 
-                        <div id="search-info" class="search-info mt-4 d-none">
-                            <p><span class="fw-bold">Ward Number:</span> 103</p>
-                            <p><span class="fw-bold">Area:</span> Whitefield</p>
-                            <p><span class="fw-bold">Community:</span> Prestige
+                        <div id="search-info"
+                            class="search-info mt-4 d-none">
+                            <p><span class="fw-bold">Ward Number:</span>
+                                103</p>
+                            <p><span class="fw-bold">Area:</span>
+                                Whitefield</p>
+                            <p><span class="fw-bold">Community:</span>
+                                Prestige
                                 Boulevard</p>
-                            <p><span class="fw-bold">Door Number:</span> 782</p>
+                            <p><span class="fw-bold">Door Number:</span>
+                                782</p>
                         </div>
 
                         <div id="no-record" class="mt-4 d-none">
                             <p class="mb-1 fw-bold">No Record Found.</p>
-                            <p class="mb-0 fw-semibold">Please add a new survey
+                            <p class="mb-0 fw-semibold">Please add a new
+                                survey
                                 record.</p>
                         </div>
                         <form id="startSurveyForm" class="d-none">

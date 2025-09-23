@@ -15,25 +15,25 @@
             crossorigin="anonymous"></script>
 
         <style>
-@media (max-width: 768px) {
-    .navbar-nav .nav-item {
+    @media (max-width: 768px) {
+      .navbar-nav .nav-item {
         font-size: 0.9rem;
         margin-bottom: 0.3rem;
-    }
-    .navbar-nav .nav-link {
+      }
+      .navbar-nav .nav-link {
         padding: 0.4rem !important;
+      }
     }
-}
-@media (max-width: 576px) {
-    .navbar-nav {
+    @media (max-width: 576px) {
+      .navbar-nav {
         justify-content: flex-start !important;
-    }
-    .navbar-nav .nav-item {
+      }
+      .navbar-nav .nav-item {
         flex: 0 0 100%;
         text-align: left;
+      }
     }
-}
-</style>
+  </style>
     </head>
     <body>
         <nav
@@ -53,7 +53,6 @@
                     id="navbarInfo">
                     <ul
                         class="navbar-nav align-items-center gap-2 gap-lg-3 flex-wrap text-nowrap">
-                        <!-- Info Items -->
                         <li class="nav-item"><span class="fw-semibold">Ward
                                 Number:</span> 103</li>
                         <li class="nav-item"><span
@@ -64,7 +63,7 @@
                         <li class="nav-item"><span class="fw-semibold">Door
                                 Number:</span> 782</li>
 
-                        <!-- Notification Icon -->
+                        <!-- Notification -->
                         <li class="nav-item">
                             <a href="#"
                                 class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
@@ -87,7 +86,7 @@
                                 role="menu" aria-label="User menu options">
                                 <li><a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#"><i
+                                        href="profile.html"><i
                                             class="fa-regular fa-user me-2"></i>
                                         My Profile</a></li>
                                 <li><a
@@ -110,88 +109,120 @@
         <main class="container mt-4">
             <form action="surveyQA.html" method="get">
 
-                <fieldset class="mb-3 position-relative">
-                    <label class="form-label fw-semibold">
-                        1. Was the door knocked?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            style="cursor:pointer;"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#q1-instruction"
-                            aria-expanded="false"
-                            aria-controls="q1-instruction"></i>
-                    </label>
-                    <div class="collapse mt-2" id="q1-instruction">
-                        <div class="card card-body p-2">
-                            Instruction for question 1 goes here.
-                        </div>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q1"
-                            id="q1-unanswered" value="unanswered" required>
-                        <label class="form-check-label"
-                            for="q1-unanswered">Unanswered</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q1"
-                            id="q1-answered" value="answered" required>
-                        <label class="form-check-label"
-                            for="q1-answered">Answered</label>
-                    </div>
-                </fieldset>
+                <div id="instructionGroup">
 
-                <fieldset class="mb-3 position-relative">
-                    <label class="form-label fw-semibold">
-                        2. Can I take two minutes of your time?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            style="cursor:pointer;"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#q2-instruction"
-                            aria-expanded="false"
-                            aria-controls="q2-instruction"></i>
-                    </label>
-                    <div class="collapse mt-2" id="q2-instruction">
-                        <div class="card card-body p-2">
-                            Instruction for question 2 goes here.
+                    <!-- Question 1 -->
+                    <fieldset class="mb-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                1. Was the door knocked?
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q1-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q1-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q1-instruction"
+                                data-bs-parent="#instructionGroup">
+                                <div class="card card-body p-2"
+                                    style="max-width:800px;">
+                                    instruction for question 1 goes here.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q2"
-                            id="q2-yes" value="yes" required>
-                        <label class="form-check-label" for="q2-yes">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q2"
-                            id="q2-no" value="no" required>
-                        <label class="form-check-label" for="q2-no">No</label>
-                    </div>
-                </fieldset>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="q1" id="q1-unanswered" value="unanswered"
+                                required>
+                            <label class="form-check-label"
+                                for="q1-unanswered">Unanswered</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                name="q1" id="q1-answered" value="answered"
+                                required>
+                            <label class="form-check-label"
+                                for="q1-answered">Answered</label>
+                        </div>
+                    </fieldset>
 
-                <fieldset class="mb-3 position-relative">
-                    <label class="form-label fw-semibold">
-                        3. Did the resident provide consent?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            style="cursor:pointer;"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#q3-instruction"
-                            aria-expanded="false"
-                            aria-controls="q3-instruction"></i>
-                    </label>
-                    <div class="collapse mt-2" id="q3-instruction">
-                        <div class="card card-body p-2">
-                            Instruction for question 3 goes here.
+                    <!-- Question 2 -->
+                    <fieldset class="mb-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                2. Can I take two minutes of your time?
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q2-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q2-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q2-instruction"
+                                data-bs-parent="#instructionGroup">
+                                <div class="card card-body p-2"
+                                    style="max-width:800px;">
+                                    instruction for question 2 goes here.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q3"
-                            id="q3-yes" value="yes" required>
-                        <label class="form-check-label" for="q3-yes">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q3"
-                            id="q3-no" value="no" required>
-                        <label class="form-check-label" for="q3-no">No</label>
-                    </div>
-                </fieldset>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="q2" id="q2-yes" value="yes" required>
+                            <label class="form-check-label"
+                                for="q2-yes">Yes</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio"
+                                name="q2" id="q2-no" value="no" required>
+                            <label class="form-check-label"
+                                for="q2-no">No</label>
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Question 3 -->
+                    <!-- <fieldset class="mb-4">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                3. Was the survey completed?
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q3-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q3-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q3-instruction"
+                                data-bs-parent="#instructionGroup">
+                                <div class="card card-body p-2"
+                                    style="max-width:800px;">
+                                    instruction for question 1 goes here.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="q3" id="q3-no" value="no" required>
+                            <label class="form-check-label"
+                                for="q3-no">No</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                name="q3" id="q3-yes" value="yes" required>
+                            <label class="form-check-label"
+                                for="q3-yes">Yes</label>
+                        </div>
+                    </fieldset> -->
+
+                </div>
 
                 <div class="d-flex justify-content-evenly mt-5">
                     <a href="door-search.html"
@@ -199,9 +230,7 @@
                     <button type="submit"
                         class="btn btn-primary btn-lg px-4 text-white">Continue</button>
                 </div>
-
             </form>
         </main>
-
     </body>
 </html>

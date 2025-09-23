@@ -83,7 +83,7 @@
                                 role="menu" aria-label="User menu options">
                                 <li><a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#"><i
+                                        href="profile.html"><i
                                             class="fa-regular fa-user me-2"></i>
                                         My Profile</a></li>
                                 <li><a
@@ -106,22 +106,25 @@
         <section class="container mt-4">
             <form action="personal.html" method="get">
 
-                <fieldset class="mb-3 position-relative">
-                    <label class="form-label fw-semibold">
-                        5. Do you know BBMP annual budget?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            style="cursor:pointer;"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#q5-instruction"
-                            aria-expanded="false"
-                            aria-controls="q5-instruction"></i>
-                    </label>
-                    <div class="collapse mt-2" id="q5-instruction">
-                        <div class="card card-body p-2">
-                            Instruction for Question 5 goes here.
+                <fieldset class="mb-3 ">
+                    <div class="d-flex align-items-start gap-2">
+                        <label class="form-label fw-semibold mb-0">
+                            5. Do you know BBMP annual budget?
+                            <i class="fa-solid fa-lightbulb text-warning ms-2"
+                                style="cursor:pointer;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#q5-instruction"
+                                aria-expanded="false"
+                                aria-controls="q5-instruction"></i>
+                        </label>
+                        <div class="collapse flex-grow-1" id="q5-instruction">
+                            <div class="card card-body p-2"
+                                style="max-width: 800px;">
+                                "If No - Reveal that it is 10,000 Cr per year"
+                            </div>
                         </div>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check mt-2">
                         <input class="form-check-input" type="radio" name="q5"
                             id="q5-yes" value="yes" required>
                         <label class="form-check-label" for="q5-yes">Yes</label>
@@ -133,24 +136,28 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="mb-3 position-relative">
-                    <label class="form-label fw-semibold">
-                        6. If a competent and professional candidate stands for
-                        corporator elections, regardless of party, would you
-                        vote for them?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            style="cursor:pointer;"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#q6-instruction"
-                            aria-expanded="false"
-                            aria-controls="q6-instruction"></i>
-                    </label>
-                    <div class="collapse mt-2" id="q6-instruction">
-                        <div class="card card-body p-2">
-                            Instruction for Question 6 goes here.
+                <fieldset class="mb-3">
+                    <div class="d-flex align-items-start gap-2">
+                        <label class="form-label fw-semibold mb-0">
+                            6. If a competent and professional candidate stands
+                            for
+                            corporator elections, regardless of party, would you
+                            vote for them?
+                            <i class="fa-solid fa-lightbulb text-warning ms-2"
+                                style="cursor:pointer;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#q6-instruction"
+                                aria-expanded="false"
+                                aria-controls="q6-instruction"></i>
+                        </label>
+                        <div class="collapse flex-grow-1" id="q6-instruction">
+                            <div class="card card-body p-2"
+                                style="max-width: 800px;">
+                                Instruction for Question 6 goes here.
+                            </div>
                         </div>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check mt-2">
                         <input class="form-check-input" type="radio" name="q6"
                             id="q6-yes" value="yes" required>
                         <label class="form-check-label" for="q6-yes">Yes</label>

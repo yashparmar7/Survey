@@ -20,11 +20,12 @@
       .d-none {
         display: none !important;
       }
+
       @media (max-width: 576px) {
-         .navbar-nav .nav-item .nav-link {
-        padding: 0.5rem !important;
-        font-size: 1.1rem;
-    }
+        .navbar-nav .nav-item .nav-link {
+          padding: 0.5rem !important;
+          font-size: 1.1rem;
+        }
         h3 {
           font-size: 1.2rem;
         }
@@ -33,30 +34,35 @@
           padding: 12px;
         }
       }
-
     </style>
     </head>
     <body>
         <nav
             class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm"
-            role="navigation" aria-label="Main navigation">
+            role="navigation"
+            aria-label="Main navigation">
             <div class="container-fluid">
-
                 <!-- Toggler -->
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarIcons"
-                    aria-controls="navbarIcons" aria-expanded="false"
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarIcons"
+                    aria-controls="navbarIcons"
+                    aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Navbar items -->
-                <div class="collapse navbar-collapse justify-content-end"
+                <div
+                    class="collapse navbar-collapse justify-content-end"
                     id="navbarIcons">
                     <ul class="navbar-nav align-items-center gap-2 gap-lg-3">
                         <!-- Notification Icon -->
                         <li class="nav-item">
-                            <a href="#"
+                            <a
+                                href="#"
                                 class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
                                 title="Notifications"
                                 aria-label="Notifications">
@@ -68,17 +74,23 @@
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link d-flex justify-content-center align-items-center p-2 bg-primary-subtle border border-primary-subtle rounded-2 shadow-sm"
-                                href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" aria-haspopup="true"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-haspopup="true"
                                 aria-label="User menu">
                                 <i class="fa-solid fa-user"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow"
-                                role="menu" aria-label="User menu options">
+                            <ul
+                                class="dropdown-menu dropdown-menu-end shadow"
+                                role="menu"
+                                aria-label="User menu options">
                                 <li>
                                     <a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#" role="menuitem">
+                                        href="profile.html"
+                                        role="menuitem">
                                         <i class="fa-regular fa-user me-2"></i>
                                         My Profile
                                     </a>
@@ -86,7 +98,8 @@
                                 <li>
                                     <a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#" role="menuitem">
+                                        href="#"
+                                        role="menuitem">
                                         <i class="fa-solid fa-gear me-2"></i>
                                         Settings
                                     </a>
@@ -94,7 +107,8 @@
                                 <li>
                                     <a
                                         class="dropdown-item text-danger d-flex align-items-center"
-                                        href="index.html" role="menuitem">
+                                        href="index.html"
+                                        role="menuitem">
                                         <i
                                             class="fa-solid fa-arrow-right-from-bracket me-2"></i>
                                         Logout
@@ -119,7 +133,12 @@
             <h3 class="text-center mb-3">Jana Spandana Survey</h3>
 
             <div class="survey-form w-100" style="max-width: 800px">
-                <form action="door-search.html" method="get" class="p-4">
+
+                <form
+                    id="surveyForm"
+                    action="door-search.html"
+                    method="get"
+                    class="p-4">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -203,8 +222,9 @@
                                     id="block-type"
                                     name="block-type"
                                     onchange="toggleInput(this, 'new-block-type')">
-                                    <option selected disabled>Select Type (Lake,
-                                        Mall, etc)</option>
+                                    <option selected disabled>
+                                        Select Type (Lake, Mall, etc)
+                                    </option>
                                     <option value="create">Create New</option>
                                     <option value="lake">Lake</option>
                                     <option value="mall">Mall</option>
@@ -231,7 +251,7 @@
                     </div>
 
                     <div class="row">
-                        <!-- Block -->
+
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="block"
@@ -318,7 +338,7 @@
                                 this data selection for the next HHS</label>
                         </div>
                         <div
-                            class="d-flex justify-content-evenly gap-3 mb-3 mt-4">
+                            class="d-flex justify-content-evenly gap-3 mb-3 mt-4 flex-wrap">
                             <a href="home.html"
                                 class="btn btn-outline-primary btn-lg">Previous</a>
                             <button
@@ -327,11 +347,13 @@
                                 Continue
                             </button>
                         </div>
-                    </form>
-                </div>
-            </main>
+                    </div>
+                </form>
+            </div>
+        </main>
 
-            <script>
+        <script>
+      
       function toggleInput(select, inputId) {
         const inputBox = document.getElementById(inputId);
         if (select.value === "create") {
@@ -341,23 +363,32 @@
         }
       }
 
-       const janaVaniRadio = document.getElementById("survey-jana-vani");
-  const maneVaniRadio = document.getElementById("survey-mane-vani");
-  const establishmentInput = document.getElementById("establishment-name");
+      const janaVaniRadio = document.getElementById("survey-jana-vani");
+      const maneVaniRadio = document.getElementById("survey-mane-vani");
+      const establishmentInput = document.getElementById("establishment-name");
+      const surveyForm = document.getElementById("surveyForm");
 
-  function toggleEstablishmentInput() {
-    if (janaVaniRadio.checked) {
-      establishmentInput.classList.remove("d-none");
-      establishmentInput.required = true;
-    } else {
-      establishmentInput.classList.add("d-none");
-      establishmentInput.required = false; 
-      establishmentInput.value = ""; 
-  }
-}
+      function toggleEstablishmentInput() {
+        if (janaVaniRadio.checked) {
+          establishmentInput.classList.remove("d-none");
+          establishmentInput.required = true;
+        } else {
+          establishmentInput.classList.add("d-none");
+          establishmentInput.required = false;
+          establishmentInput.value = "";
+        }
+      }
 
-  janaVaniRadio.addEventListener("change", toggleEstablishmentInput);
-  maneVaniRadio.addEventListener("change", toggleEstablishmentInput);
+      janaVaniRadio.addEventListener("change", toggleEstablishmentInput);
+      maneVaniRadio.addEventListener("change", toggleEstablishmentInput);
+
+      surveyForm.addEventListener("submit", function () {
+        if (janaVaniRadio.checked) {
+          surveyForm.action = "survey-start.html";
+        } else {
+          surveyForm.action = "door-search.html";
+        }
+      });
     </script>
-        </body>
-    </html>
+    </body>
+</html>

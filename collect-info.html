@@ -15,7 +15,7 @@
             background-color: #f8f9fa;
         }
         main.container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
         }
         fieldset {
@@ -113,7 +113,7 @@
                                 role="menu" aria-label="User menu options">
                                 <li><a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#"><i
+                                        href="profile.html"><i
                                             class="fa-regular fa-user me-2"></i>
                                         My Profile</a></li>
                                 <li><a
@@ -137,22 +137,30 @@
             <form action="final.html" method="get">
                 <h5>Now collect the personal information</h5>
 
-                <fieldset class="position-relative">
-                    <label class="form-label">
-                        Would you be okay being added to the WhatsApp group with
-                        other like minded citizens of this area?
-                        <i class="fa-solid fa-lightbulb text-warning ms-4"
-                            style="cursor:pointer;"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#q1-instruction"
-                            aria-expanded="false"></i>
-                    </label>
-                    <div class="collapse mt-2" id="q1-instruction">
-                        <div class="card card-body p-2">
-                            Instruction Here
+                <fieldset class="mb-3">
+                    <div class="d-flex align-items-start gap-2">
+                        <label class="form-label fw-semibold mb-0">
+                            Would you be okay being added to the WhatsApp group
+                            with <br>
+                            other like minded citizens of this area?
+                            <i class="fa-solid fa-lightbulb text-warning ms-2"
+                                style="cursor:pointer;"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#q1-instruction"
+                                aria-expanded="false"></i>
+                        </label>
+                        <div class="collapse flex-grow-1" id="q1-instruction">
+                            <div class="card card-body p-2"
+                                style="max-width: 800px;">
+                                Whatever issue you’re facing whether it’s with
+                                E-Khata, property tax, or any civic issue like
+                                garbage, street lights etc this WhatsApp group
+                                your support community. The BNP Team will pick
+                                it up immediately and start supporting you.
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex gap-4 mt-2">
+                    <div class="d-flex mt-2 gap-4 ">
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
                                 name="whatsappGroup" id="q1-yes" value="yes"

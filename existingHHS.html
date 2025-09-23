@@ -87,7 +87,7 @@
                                 role="menu" aria-label="User menu options">
                                 <li><a
                                         class="dropdown-item d-flex align-items-center"
-                                        href="#"><i
+                                        href="profile.html"><i
                                             class="fa-regular fa-user me-2"></i>
                                         My Profile</a></li>
                                 <li><a
@@ -109,12 +109,8 @@
 
         <main class="container mt-3">
             <div class="text-start mb-4">
-                <p class="mb-1">
-                    Record Found for Door No. 246
-                </p>
-                <p>
-                    Proceed with selection of existing or new HH member
-                </p>
+                <p class="mb-1">Record Found for Door No. 246</p>
+                <p>Proceed with selection of existing or new HH member</p>
             </div>
 
             <div class="table-responsive">
@@ -131,15 +127,10 @@
                             <td>
                                 <div
                                     class="form-check d-flex justify-content-center">
-                                    <input
-                                        class="form-check-input me-2"
-                                        type="checkbox"
-                                        id="rajesh"
-                                        checked />
+                                    <input class="form-check-input me-2"
+                                        type="checkbox" id="rajesh" checked />
                                     <label class="form-check-label"
-                                        for="rajesh">
-                                        Rajesh Sharma
-                                    </label>
+                                        for="rajesh">Rajesh Sharma</label>
                                 </div>
                             </td>
                             <td>13-08-2025</td>
@@ -149,13 +140,10 @@
                             <td>
                                 <div
                                     class="form-check d-flex justify-content-center">
-                                    <input
-                                        class="form-check-input me-2"
-                                        type="checkbox"
-                                        id="ankur" />
-                                    <label class="form-check-label" for="ankur">
-                                        Ankur Kumar
-                                    </label>
+                                    <input class="form-check-input me-2"
+                                        type="checkbox" id="ankur" />
+                                    <label class="form-check-label"
+                                        for="ankur">Ankur Kumar</label>
                                 </div>
                             </td>
                             <td>13-08-2025</td>
@@ -167,119 +155,166 @@
 
             <section class="mt-2">
                 <form action="surveyQA.html" method="get">
-                    <div class="mb-2">
-                        <label class="form-label fw-semibold d-block">
-                            1. Door knocked?
-                        </label>
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="doorKnock"
-                                id="unanswered"
+
+                    <!-- Question 1 -->
+                    <fieldset class="mb-2">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                1. Door knocked?
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q1-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q1-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q1-instruction">
+                                <div class="card card-body p-2"
+                                    style="max-width: 800px;">
+                                    Instruction for Question 1 goes here.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="doorKnock" id="unanswered"
                                 value="unanswered" />
                             <label class="form-check-label"
                                 for="unanswered">Unanswered</label>
                         </div>
                         <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="doorKnock"
-                                id="answered"
+                            <input class="form-check-input" type="radio"
+                                name="doorKnock" id="answered"
                                 value="answered" />
                             <label class="form-check-label"
                                 for="answered">Answered</label>
                         </div>
-                    </div>
+                    </fieldset>
 
-                    <div class="mb-2">
-                        <label class="form-label fw-semibold d-block">
-                            2. Can I take two mins of your time?
-                        </label>
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="timeConsent"
-                                id="yesTime"
-                                value="yes" />
+                    <!-- Question 2 -->
+                    <fieldset class="mb-2">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                2. Can I take two mins of your time?
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q2-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q2-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q2-instruction">
+                                <div class="card card-body p-2"
+                                    style="max-width: 800px;">
+                                    Instruction for Question 2 goes here.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="timeConsent" id="yesTime" value="yes" />
                             <label class="form-check-label"
                                 for="yesTime">Yes</label>
                         </div>
                         <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="timeConsent"
-                                id="noTime"
-                                value="no" />
+                            <input class="form-check-input" type="radio"
+                                name="timeConsent" id="noTime" value="no" />
                             <label class="form-check-label"
                                 for="noTime">No</label>
                         </div>
-                    </div>
+                    </fieldset>
 
-                    <div class="mb-2 ">
-                        <label class="form-label fw-semibold d-block">
-                            3. Choose Household Type :
-                        </label>
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="household"
-                                id="existingHH"
+                    <!-- Question 3 -->
+                    <fieldset class="mb-2">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                3. Choose Household Type:
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q3-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q3-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q3-instruction">
+                                <div class="card card-body p-2"
+                                    style="max-width: 800px;">
+                                    If you are talking to same person whom you
+                                    spoke previously or any relatives / friends
+                                    of that person, then select Existing HH
+                                    option. otherwise select New HH. Which means
+                                    the house now has a different tenant.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="household" id="existingHH"
                                 value="existing" />
                             <label class="form-check-label"
                                 for="existingHH">Existing HH</label>
                         </div>
                         <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="household"
-                                id="newHH"
-                                value="new" />
+                            <input class="form-check-input" type="radio"
+                                name="household" id="newHH" value="new" />
                             <label class="form-check-label" for="newHH">New
                                 HH</label>
                         </div>
-                    </div>
+                    </fieldset>
 
-                    <div class="mb-2 ">
-                        <label class="form-label fw-semibold d-block">
-                            4. Choose Survey Type :
-                        </label>
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="surveyType"
-                                id="newSurvey"
-                                value="new" />
+                    <!-- Question 4 -->
+                    <fieldset class="mb-2">
+                        <div class="d-flex align-items-start gap-2">
+                            <label class="form-label fw-semibold mb-0">
+                                4. Choose Survey Type:
+                                <i
+                                    class="fa-solid fa-lightbulb text-warning ms-2"
+                                    style="cursor:pointer;"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#q4-instruction"
+                                    aria-expanded="false"
+                                    aria-controls="q4-instruction"></i>
+                            </label>
+                            <div class="collapse flex-grow-1"
+                                id="q4-instruction">
+                                <div class="card card-body p-2"
+                                    style="max-width: 800px;">
+                                    If the same person (existing HH) is being
+                                    interviewed then the 'Follow up survey' is
+                                    selected by default otherwise new survey is
+                                    selected by default.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                name="surveyType" id="newSurvey" value="new" />
                             <label class="form-check-label" for="newSurvey">New
                                 Survey</label>
                         </div>
                         <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="surveyType"
-                                id="followupSurvey"
+                            <input class="form-check-input" type="radio"
+                                name="surveyType" id="followupSurvey"
                                 value="followup" />
                             <label class="form-check-label"
                                 for="followupSurvey">Follow-up Survey</label>
                         </div>
+                    </fieldset>
+
+                    <div class="text-center mb-5">
+                        <button type="submit"
+                            class="btn btn-primary btn-lg px-5 mt-3">Start
+                            Survey</button>
                     </div>
 
-                    <div class="text-center mb-5 ">
-                        <button type="submit"
-                            class="btn btn-primary btn-lg px-5 mt-3">
-                            Start Survey
-                        </button>
-                    </form>
-                </div>
+                </form>
             </section>
-
         </main>
 
         <script
